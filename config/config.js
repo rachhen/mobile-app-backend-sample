@@ -76,6 +76,7 @@ export default {
     {
       path: '/user',
       component: '../layouts/UserLayout',
+      Routes: ['src/pages/Authorized'],
       routes: [
         {
           name: 'login',
@@ -87,28 +88,37 @@ export default {
     {
       path: '/',
       component: '../layouts/SecurityLayout',
+      Routes: ['src/pages/Authorized'],
       routes: [
         {
           path: '/',
           component: '../layouts/BasicLayout',
-          authority: ['admin', 'user'],
           routes: [
             {
               path: '/',
               redirect: '/welcome',
+              authority: ['admin', 'user'],
             },
             {
               path: '/welcome',
               name: 'welcome',
               icon: 'smile',
+              authority: ['admin', 'user'],
               component: './Welcome',
             },
             {
               path: '/admin',
               name: 'admin',
               icon: 'crown',
+              authority: ['admin', 'user'],
               component: './admin',
-              authority: ['admin'],
+            },
+            {
+              path: '/list-user',
+              name: 'List User',
+              icon: 'user',
+              authority: ['admin', 'user'],
+              component: './user/list',
             },
             {
               component: './404',

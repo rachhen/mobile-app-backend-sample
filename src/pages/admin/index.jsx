@@ -124,6 +124,7 @@ const Admin = () => {
         actionRef={actionRef}
         rowKey="key"
         search={false}
+        // options={{ setting: false }}
         toolBarRender={(action, { selectedRows }) => [
           <Button icon="plus" type="primary" onClick={() => handleModalVisible(true)}>
             New

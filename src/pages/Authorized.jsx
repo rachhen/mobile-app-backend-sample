@@ -2,21 +2,15 @@ import React from 'react';
 import Redirect from 'umi/redirect';
 import { connect } from 'dva';
 import Authorized from '@/utils/Authorized';
+import { getAuthority } from '@/utils/authority';
 import { getRouteAuthority } from '@/utils/utils';
 
-const AuthComponent = ({
-  children,
-  route = {
-    routes: [],
-  },
-  location = {
-    pathname: '',
-  },
-  user,
-}) => {
-  const { currentUser } = user;
+const AuthComponent = ({ children, route, location }) => {
+  // const { currentUser } = user;
   const { routes = [] } = route;
-  const isLogin = currentUser && currentUser.name;
+  const auth = getAuthority();
+  const isLogin = auth && auth[0] !== 'guest';
+
   return (
     <Authorized
       authority={getRouteAuthority(location.pathname, routes) || ''}

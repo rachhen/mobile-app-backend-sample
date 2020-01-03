@@ -1,7 +1,7 @@
 import { stringify } from 'querystring';
 import router from 'umi/router';
 import { fakeAccountLogin, getFakeCaptcha } from '@/services/login';
-import { setAuthority } from '@/utils/authority';
+import { setAuthority, removeAuthority } from '@/utils/authority';
 import { getPageQuery } from '@/utils/utils';
 
 const Model = {
@@ -55,6 +55,7 @@ const Model = {
             redirect: window.location.href,
           }),
         });
+        removeAuthority();
       }
     },
   },
