@@ -5,14 +5,13 @@ import 'firebase/storage';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: 'AIzaSyAivf7okJmXY7rbQnEgCNGOalcG92Mx1Vw',
-  authDomain: 'fir-cloud-function-fda9f.firebaseapp.com',
-  databaseURL: 'https://fir-cloud-function-fda9f.firebaseio.com',
-  projectId: 'fir-cloud-function-fda9f',
-  storageBucket: 'fir-cloud-function-fda9f.appspot.com',
-  messagingSenderId: '1048273217130',
-  appId: '1:1048273217130:web:cdfe23ebd8fa7ac243cc13',
-  measurementId: 'G-J5VML07E52',
+  apiKey: 'AIzaSyB1GtSM1H9UbGfwttPDF8Raq0nIV-mSYzo',
+  authDomain: 'eo-csma-v2.firebaseapp.com',
+  databaseURL: 'https://eo-csma-v2.firebaseio.com',
+  projectId: 'eo-csma-v2',
+  storageBucket: 'eo-csma-v2.appspot.com',
+  messagingSenderId: '609230766341',
+  appId: '1:609230766341:web:c4c18a71cd28d63366f76c',
 };
 
 // Initialize Firebase

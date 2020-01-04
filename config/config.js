@@ -114,6 +114,13 @@ export default {
               component: './admin',
             },
             {
+              path: '/property',
+              name: 'property',
+              icon: 'crown',
+              authority: ['admin', 'user'],
+              component: './property',
+            },
+            {
               path: '/list-user',
               name: 'List User',
               icon: 'user',
